@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import healthRoutes from './routes/health.js';
 import authRoutes from './routes/auth.js';
+import campaignsRoutes from './routes/campaigns.js';
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 
 app.use('/api/health', healthRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/campaigns', campaignsRoutes);
 
 app.get('/', (req, res) => {
   res.json({ message: 'Crowdfund Hub server is running' });
