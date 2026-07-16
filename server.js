@@ -8,6 +8,7 @@ import campaignsRoutes from './routes/campaigns.js';
 import meRoutes from './routes/me.js';
 import contributionsRoutes from './routes/contributions.js';
 import creatorCampaignsRoutes from './routes/creatorCampaigns.js';
+import adminRoutes from './routes/admin.js';
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/campaigns', campaignsRoutes);
 app.use('/api/contributions', contributionsRoutes);
 app.use('/api/creator-campaigns', creatorCampaignsRoutes);
+app.use('/api/admin', adminRoutes);
 app.use('/api', meRoutes);
 
 app.get('/', (req, res) => {
