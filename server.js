@@ -7,6 +7,7 @@ import authRoutes from './routes/auth.js';
 import campaignsRoutes from './routes/campaigns.js';
 import meRoutes from './routes/me.js';
 import contributionsRoutes from './routes/contributions.js';
+import creatorCampaignsRoutes from './routes/creatorCampaigns.js';
 
 dotenv.config();
 
@@ -20,6 +21,7 @@ app.use('/api/health', healthRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/campaigns', campaignsRoutes);
 app.use('/api/contributions', contributionsRoutes);
+app.use('/api/creator-campaigns', creatorCampaignsRoutes);
 app.use('/api', meRoutes);
 
 app.get('/', (req, res) => {
