@@ -6,6 +6,7 @@ import healthRoutes from './routes/health.js';
 import authRoutes from './routes/auth.js';
 import campaignsRoutes from './routes/campaigns.js';
 import meRoutes from './routes/me.js';
+import contributionsRoutes from './routes/contributions.js';
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use('/api/health', healthRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/campaigns', campaignsRoutes);
+app.use('/api/contributions', contributionsRoutes);
 app.use('/api', meRoutes);
 
 app.get('/', (req, res) => {
